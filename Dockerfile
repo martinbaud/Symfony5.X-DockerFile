@@ -11,9 +11,6 @@ RUN set -xe \
     && rm -rf /tmp/* \
     && apk del  .phpize-deps
 
-# Override php.ini settings
-COPY ./docker/symfony/app_custom.ini /usr/local/etc/php/conf.d/app_custom.ini
-
 WORKDIR /var/www/html
 
 COPY . /var/www/html
